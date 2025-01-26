@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* Ширина в процентах для адаптивности */
+    max-width: 400px; /* Максимальная ширина */
+    height: 600px; /* Высота контейнера */
+    margin: 50px auto; /* Центрирование контейнера */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#message-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px 10px 0 0; /* Скругление верхних углов */
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+#message-input {
+    display: flex;
+}
+
+#input-text {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0 0 0 10px; /* Скругление левого нижнего угла */
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+#input-text:focus {
+    border-color: #007bff; /* Изменение цвета бордюра при фокусе */
+}
+
+#send-button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff; /* Синий фон для кнопки */
+    color: white;
+    border-radius: 0 0 10px 0; /* Скругление правого нижнего угла */
+    transition: background-color 0.3s;
+}
+
+#send-button:hover {
+    background-color: #0056b3; /* Более темный цвет при наведении */
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 480px) {
+    #chat-container {
+        height: 500px; /* Уменьшенная высота для мобильных */
+    }
+
+    #input-text {
+        padding: 8px; /* Уменьшение полей для мобильных */
+    }
+
+    #send-button {
+        padding: 8px; /* Уменьшение полей для мобильных */
+    }
+}
